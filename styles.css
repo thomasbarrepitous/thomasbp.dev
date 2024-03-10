@@ -4,8 +4,8 @@ body {
   background: radial-gradient(circle at 20% 30%, #0c1442, transparent),
     radial-gradient(circle at 80% 70%, #07082e, transparent),
     radial-gradient(circle at 50% 50%, #05071a, transparent),
-    radial-gradient(circle at 70% 20%, #001d3d, transparent);
-  background-size: 200% 200%;
+    radial-gradient(circle at 70% 20%, #040617, transparent);
+  background-size: 200vw 200vh;
   animation: gradientAnimation 25s ease infinite;
 }
 
@@ -18,12 +18,28 @@ body {
       0% 0%;
   }
 
+  25% {
+    background-position:
+      50% 0%,
+      20% 0%,
+      80% 0%,
+      100% 0%;
+  }
+
   50% {
     background-position:
-      100% 100%,
-      100% 100%,
-      100% 100%,
-      100% 100%;
+      100% 0%,
+      40% 0%,
+      60% 0%,
+      50% 0%;
+  }
+
+  75% {
+    background-position:
+      70% 0%,
+      90% 0%,
+      30% 0%,
+      80% 0%;
   }
 
   100% {
@@ -62,4 +78,35 @@ body {
 
 .typed-cursor {
   color: #f5cb42;
+}
+
+.block {
+  height: 200vh;
+  border-top: 1px solid red;
+}
+
+#kid-star {
+  color: #f5cb42;
+}
+
+#scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50vh);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
