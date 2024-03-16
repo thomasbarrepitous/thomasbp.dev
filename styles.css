@@ -7,6 +7,7 @@ body {
         radial-gradient(circle at 70% 20%, #040617, transparent);
     background-size: 200vw 200vh;
     animation: gradientAnimation 25s ease infinite;
+    background-color: #040617;
 }
 
 @keyframes gradientAnimation {
@@ -77,11 +78,7 @@ body {
 
 .typed-cursor {
     color: #f5cb42;
-}
-
-.block {
-    height: 200vh;
-    border-top: 1px solid red;
+    font-size: 1.5em;
 }
 
 #kid-star {
@@ -89,11 +86,7 @@ body {
 }
 
 #scroll-down {
-    position: absolute;
-    bottom: 20px;
-    left: 50vw;
-    transform: translateX(-50vh);
-    animation: bounce 1.5s infinite;
+    animation: bounce 2.5s infinite;
 }
 
 @keyframes bounce {
@@ -113,9 +106,5 @@ body {
 @media screen and (max-width: 768px) {
     #kid-star {
         font-size: 34px !important;
-    }
-
-    #scroll-down {
-        left: 49vw;
     }
 }
