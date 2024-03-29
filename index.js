@@ -1,18 +1,18 @@
 // Generate random stars
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 100; i++) {
   const star = document.createElement("div");
   star.classList.add("star");
   star.style.width = `${Math.random() * 2}px`;
   star.style.height = star.style.width;
-  star.style.top = `${Math.random() * 100}%`;
-  star.style.left = `${Math.random() * 100}%`;
+  star.style.top = `${Math.random() * 200}%`;
+  star.style.left = `${Math.random() * 200}%`;
   document.getElementById("stars").appendChild(star);
 }
 
 // Animate stars using GSAP
 gsap.to(".star", {
   opacity: 0.5,
-  duration: 1,
+  duration: 2,
   repeat: -1,
   yoyo: true,
   stagger: {
@@ -22,7 +22,7 @@ gsap.to(".star", {
   ease: "power1.inOut",
 });
 
-var typed = new Typed("#typed-phrases", {
+const typed = new Typed("#typed-phrases", {
   strings: [
     "i'm not superstitious i'm a little stitious",
     "fear is the mind-killer",
@@ -32,8 +32,9 @@ var typed = new Typed("#typed-phrases", {
     "오늘 밤이 지나면 우리들은 어제와 다를 것이다",
     "한국을 떠나지 않았다면? \n 않고 우리가 같히 자랐더라도 나 널 찾았을까 ? ",
   ],
-  typeSpeed: 55,
-  backSpeed: 35,
+  typeSpeed: 75,
+  backSpeed: 50,
+  backDelay: 1500,
   loop: true,
   showCursor: true,
   shuffle: true,
@@ -70,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     perView: 3, // Number of thumbnails visible at once
     focusAt: "center",
     gap: 40,
+    animationDuration: 150,
   }).mount();
 
   // Init current page state
