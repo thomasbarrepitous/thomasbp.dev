@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     background: radial-gradient(circle at 20% 30%, #0c1442, transparent),
         radial-gradient(circle at 80% 70%, #07082e, transparent),
         radial-gradient(circle at 50% 50%, #05071a, transparent),
         radial-gradient(circle at 70% 20%, #040617, transparent);
-    background-size: 200vw 200vh;
+    background-size: 200% 200%;
     animation: gradientAnimation 25s ease infinite;
     background-color: #040617;
 }
@@ -85,7 +85,7 @@ body {
     color: #f5cb42;
 }
 
-#scroll-down {
+#first-star {
     animation: bounce 2.5s infinite;
 }
 
@@ -107,4 +107,27 @@ body {
     #kid-star {
         font-size: 34px !important;
     }
+}
+
+.glide__slides {
+    overflow: visible;
+}
+
+.glide__slide {
+    text-align: center;
+
+    filter: blur(6px);
+    opacity: 0.5;
+    transition: 0.2s linear;
+}
+
+.glide__slide img {
+    width: 30vw;
+    height: 30vw;
+}
+
+.glide__slide--active {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.1);
 }
